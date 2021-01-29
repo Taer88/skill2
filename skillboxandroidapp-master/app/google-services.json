@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "550710867086",
+    "firebase_url": "https://anydog-1583423075853.firebaseio.com",
+    "project_id": "anydog-1583423075853",
+    "storage_bucket": "anydog-1583423075853.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550710867086:android:e92c38cff7b96eeeb1c5df",
+        "android_client_info": {
+          "package_name": "com.anydog.t2m.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550710867086-k1kohiski18q0ebdfggebbhohoh7nl6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anydog.t2m.test",
+            "certificate_hash": "61ec6937db2030f2ecf461738fbdde0b086375f4"
+          }
+        },
+        {
+          "client_id": "550710867086-3scumkv1s7vg5an11ckcpb4f75q15992.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaMhpAQ__DIiPrRU8YD4ZpVaqhe98hrZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550710867086-vqlne4cl5tdnr3826ot0evavgfdjtl3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

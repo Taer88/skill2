@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.anydog.qaedu.ui.profile.ProfileViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/bg_design"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|top"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextStyle.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="10dp"
+                android:text="@{viewModel.name}"
+                android:textSize="20sp"
+                tools:text="User nickname" />
+
+            <com.anydog.qaedu.ui.custom.CircleImageView
+                android:id="@+id/productImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:maxWidth="128dp"
+                android:maxHeight="128dp"
+                android:minWidth="128dp"
+                android:minHeight="128dp"
+                android:onClick="@{() -> viewModel.navigator.getImage()}"
+                app:avatarUrl="@{viewModel.avatar}"
+                tools:src="@drawable/rounded_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="top|center"
+                android:orientation="vertical">
+
+<!--                <TextView-->
+<!--                    style="@style/TextStyle.Heading"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity=""-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:text="@{viewModel.phone}"-->
+<!--                    android:textAllCaps="true"-->
+<!--                    tools:text="Phone number" />-->
+
+                <TextView
+                    style="@style/TextStyle.Comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_marginTop="10dp"
+                    android:text="@{viewModel.about}"
+                    android:textAllCaps="true"
+                    tools:text="About patient" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            style="@style/TextStyle.Heading"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="-40dp"
+            android:onClick="@{() -> viewModel.logout()}"
+            android:text="@string/logout"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="12sp" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/looking_up"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </FrameLayout>
+
+</layout>
